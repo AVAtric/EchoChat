@@ -1,0 +1,13 @@
+variables:
+
+stages:
+  - deploy
+
+deploy_production:
+  stage: deploy
+  script:
+  - php /home/ubuntu/.composer/vendor/bin/envoy run deploy
+  only:
+  - master
+  tags:
+  - prod
