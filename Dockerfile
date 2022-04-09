@@ -157,10 +157,4 @@ RUN touch laravel.cron && \
 
 CMD ["crond", "-l", "2", "-f"]
 
-FROM cli as websocket
-
-WORKDIR /opt/apps/echo-chat
-
-CMD [ "php", "./artisan", "websockets:serve" ]
-
 FROM cli

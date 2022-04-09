@@ -16,7 +16,6 @@ docker: docker-build docker-push
 docker-build:
 	docker build . --target cli -t ${REGISTRY}/cli:${VERSION} -t ${REGISTRY}/cli:latest
 	docker build . --target cron -t ${REGISTRY}/cron:${VERSION} -t ${REGISTRY}/cron:latest
-	docker build . --target websocket -t ${REGISTRY}/websocket:${VERSION} -t ${REGISTRY}/websocket:latest
 	docker build . --target fpm_server -t ${REGISTRY}/fpm_server:${VERSION} -t ${REGISTRY}/fpm_server:latest
 	docker build . --target web_server -t ${REGISTRY}/web_server:${VERSION} -t ${REGISTRY}/web_server:latest
 
@@ -25,8 +24,6 @@ docker-push:
 	docker push ${REGISTRY}/cli:latest
 	docker push ${REGISTRY}/cron:${VERSION}
 	docker push ${REGISTRY}/cron:latest
-	docker push ${REGISTRY}/websocket:${VERSION}
-	docker push ${REGISTRY}/websocket:latest
 	docker push ${REGISTRY}/fpm_server:${VERSION}
 	docker push ${REGISTRY}/fpm_server:latest
 	docker push ${REGISTRY}/web_server:${VERSION}

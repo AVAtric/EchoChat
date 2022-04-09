@@ -21,7 +21,6 @@
                         <div class="content">
                             <form method="POST" action="{{ route('password.email') }}" id="forgot-password">
                                 @csrf
-                                <captcha-token captcha_name="validateEmail"></captcha-token>
                                 <div class="field">
                                     <label class="label">{{ __('E-Mail Address') }}</label>
                                     <div class="control">
@@ -34,12 +33,6 @@
                                     @enderror
                                 </div>
                             </form>
-                            <br>
-                            <small>
-                                This site is protected by reCAPTCHA and the Google
-                                <a href="https://policies.google.com/privacy">Privacy Policy</a> and
-                                <a href="https://policies.google.com/terms">Terms of Service</a> apply.
-                            </small>
                         </div>
                     </div>
                     <footer class="card-footer">

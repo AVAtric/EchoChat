@@ -74,10 +74,6 @@
                        href="{{ route('chat') }}">
                         Chat
                     </a>
-
-                    <a class="navbar-item">
-                        Project administration
-                    </a>
                 </div>
             @endauth
 
